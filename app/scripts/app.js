@@ -7,6 +7,9 @@ angular.module('NodeAngularJSHTML5modeApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/foo/bar', {
+        templateUrl: 'views/foo/bar/view.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
