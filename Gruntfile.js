@@ -65,7 +65,8 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               modRewrite([
-                '!\\.html|\\images|\\.js|\\.css|\\.png|\\.jpg|\\.woff|\\.ttf|\\.svg /index.html [L]'
+                '!\\.html|\\images|\\.js|\\.css|\\.png|\\.jpg|\\.woff|\\.ttf|\\.svg /index.html [L]',
+                'foo/(.*) /$1'
               ]),
               lrSnippet,
               mountFolder(connect, '.tmp'),
