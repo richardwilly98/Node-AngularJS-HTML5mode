@@ -65,8 +65,7 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               modRewrite([
-                '!\\.\\w+$ /',
-                'foo/(.*) /$1'
+                '!\\.\\w+$ /'
               ]),
               lrSnippet,
               mountFolder(connect, '.tmp'),

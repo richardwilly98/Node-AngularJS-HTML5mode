@@ -10,8 +10,29 @@ angular.module('NodeAngularJSHTML5modeApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/foo/bar/baz', {
+        templateUrl: '/views/foo/bar/baz/baz.html',
+        controller: 'MainCtrl'
+      })
+      .when('/foo/bar/baz/:param', {
+        templateUrl: '/views/foo/bar/baz/baz.html',
+        controller: 'MainCtrl'
+      })
       .when('/foo/bar', {
-        templateUrl: 'views/foo/bar/view.html'
+        templateUrl: '/views/foo/bar/bar.html',
+        controller: 'MainCtrl'
+      })
+      .when('/foo/bar/:param', {
+        templateUrl: '/views/foo/bar/bar.html',
+        controller: 'MainCtrl'
+      })
+      .when('/foo', {
+        templateUrl: '/views/foo/foo.html',
+        controller: 'MainCtrl'
+      })
+      .when('/foo/:param', {
+        templateUrl: '/views/foo/foo.html',
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
